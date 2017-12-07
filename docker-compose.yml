@@ -1,0 +1,24 @@
+# DEV environment, one image contains everything
+version: '3'
+services:
+    server:
+        build:
+            context: .
+            args:
+              - PASSWORD=${PASSWORD}
+            dockerfile: "Dockerfile"
+
+        container_name: "fun-server"
+        hostname: fun-server
+        image: fun-server
+        entrypoint: /app/docker_start.sh
+        ports:
+          - "8080:80"
+          - "2022:22"
+          - "3306:3306"
+        volumes:
+          - ${PLATFORM_ROOT}:/var/www
+          - ./app:/app
+          - ./volumes/mysql:/var/lib/mysql
+          - ./volumes/var_log/mysql:/var/log/mysql
+          - ./volumes/var_log/apache2:/var/log/apache2
