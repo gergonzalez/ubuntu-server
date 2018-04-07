@@ -14,7 +14,7 @@ An easy to set up Ubuntu server for a PHP development environment without requir
 
 ## Getting Started
 
-### Installing
+### Prerequisites
 
 Install Docker ( https://www.docker.com/community-edition )
 
@@ -76,7 +76,7 @@ Port: 3306
 
 ## Warning
 
-This environment is intended to be used as a development environment. Please, DO NOT USE it in a production/real environment. 
+This environment is intended to be used as a development environment. Please, DO NOT USE it in a production/real environment. Also,
 
 ## License
 
