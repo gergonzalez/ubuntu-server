@@ -52,7 +52,7 @@ RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf
 RUN a2enmod rewrite
 RUN a2enmod headers
 
-EXPOSE 22 80
+EXPOSE 22 80 3306
 
 CMD ["/usr/bin/supervisord"]
 

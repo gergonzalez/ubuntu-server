@@ -8,9 +8,9 @@ services:
               - PASSWORD=${PASSWORD}
             dockerfile: "Dockerfile"
 
-        container_name: "fun-server"
-        hostname: fun-server
-        image: fun-server
+        container_name: "ubuntu-server"
+        hostname: ubuntu-server
+        image: ubuntu-server
         entrypoint: /app/docker_start.sh
         ports:
           - "8080:80"
